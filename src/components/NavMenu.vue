@@ -32,7 +32,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   .container-menu{
     position: fixed;
     padding: 2rem;
