@@ -64,9 +64,7 @@ export default {
     overflow: hidden;
     object-position: center;
     @include flex-center;
-    filter: grayscale(100%) contrast(96%) brightness(90%);
-    -webkit-filter: grayscale(100%) contrast(96%) brightness(90%);
-    -moz-filter: grayscale(100%) contrast(96%) brightness(90%);
+    @include black-and-white;
     transition: transform ease-in 0.5s;
     transform: translate(5%, 5%);
 
