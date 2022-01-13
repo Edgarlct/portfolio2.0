@@ -18,6 +18,11 @@ export default {
     Header,
     Presentation,
   },
+  data(){
+    return{
+      publicPath: process.env.BASE_URL,
+    }
+  }
 };
 </script>
 
@@ -42,5 +47,6 @@ export default {
 .container{
   width: 85%;
   margin: auto;
+  position: relative;
 }
 </style>

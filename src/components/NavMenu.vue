@@ -1,13 +1,7 @@
 <template>
-<div class="container-menu">
-  <div class="sibebar-left">
+<div class="bg"></div>
+  <div class="sidebar-top">
     <p class="logo">ed</p>
-    <ul class="container-reseaux">
-      <li><a href="#"><i class="fab fa-github"></i></a></li>
-      <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-    </ul>
-  </div>
-  <div class="sibebar-right">
     <nav>
       <ul>
         <li><a href="#">Présentation</a></li>
@@ -16,6 +10,12 @@
         <li><a href="#">Contact</a></li>
       </ul>
     </nav>
+  </div>
+  <div class="sidebar-bottom">
+    <ul class="container-reseaux">
+      <li><a href="#"><i class="fab fa-github"></i></a></li>
+      <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+    </ul>
     <div class="container-scroll">
       <span></span>
       <div>
@@ -23,7 +23,6 @@
       </div>
     </div>
   </div>
-</div>
 </template>
 
 <script>
@@ -33,31 +32,43 @@ export default {
 </script>
 
 <style lang="scss">
-  .container-menu{
+  .bg{
     position: fixed;
-    padding: 2rem;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     background:radial-gradient(circle at 30% 5%, rgb(84, 84, 84) 0%, rgb(49, 49, 49) 30%, rgb(8, 8, 8) 100%);
     background:-moz-radial-gradient(circle at 30% 5%, rgb(84, 84, 84) 0%, rgb(49, 49, 49) 30%, rgb(8, 8, 8) 100%);
     background:-webkit-radial-gradient(circle at 30% 5%, rgb(84, 84, 84) 0%, rgb(49, 49, 49) 30%, rgb(8, 8, 8) 100%);
     background:-o-radial-gradient(circle at 30% 5%, rgb(84, 84, 84) 0%, rgb(49, 49, 49) 30%, rgb(8, 8, 8) 100%);
     background:-ms-radial-gradient(circle at 30% 5%, rgb(84, 84, 84) 0%, rgb(49, 49, 49) 30%, rgb(8, 8, 8) 100%);
     z-index: -1;
-
-    >div{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    i{
-      color: $gray-600;
-      font-size: 1.5rem;
-    }
   }
+    .sidebar-top, .sidebar-bottom{
+      position: fixed;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0 2rem;
+    }
+
+    .sidebar-bottom{
+      bottom: 0;
+      padding-bottom: 2rem;
+
+      i{
+        color: $gray-600;
+        font-size: 1.5rem;
+      }
+    }
+
+    .sidebar-top{
+      padding-top: 2rem;
+      z-index: 1;
+    }
+
 
   .sibebar-left{
     align-items: center;
@@ -70,7 +81,7 @@ export default {
   .container-reseaux{
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    justify-content: space-evenly;
   }
 
   .logo{
