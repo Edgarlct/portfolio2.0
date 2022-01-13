@@ -3,6 +3,7 @@
   <div class="container">
     <Header></Header>
     <Presentation></Presentation>
+    <Project></Project>
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import NavMenu from "./components/NavMenu";
 import Header from "./views/Header";
 import Presentation from "./views/Presentation";
+import Project from "./views/Project";
 
 export default {
   name: "App",
@@ -17,6 +19,7 @@ export default {
     NavMenu,
     Header,
     Presentation,
+    Project,
   },
   data(){
     return{
