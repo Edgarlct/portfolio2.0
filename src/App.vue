@@ -2,18 +2,21 @@
   <NavMenu></NavMenu>
   <div class="container">
     <Header></Header>
+    <Presentation></Presentation>
   </div>
 </template>
 
 <script>
 import NavMenu from "./components/NavMenu";
 import Header from "./views/Header";
+import Presentation from "./views/Presentation";
 
 export default {
   name: "App",
   components: {
     NavMenu,
     Header,
+    Presentation,
   },
 };
 </script>
@@ -28,11 +31,12 @@ export default {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background:radial-gradient(circle at 30% 5%, rgb(84, 84, 84) 0%, rgb(49, 49, 49) 30%, rgb(8, 8, 8) 100%);
-  background:-moz-radial-gradient(circle at 30% 5%, rgb(84, 84, 84) 0%, rgb(49, 49, 49) 30%, rgb(8, 8, 8) 100%);
-  background:-webkit-radial-gradient(circle at 30% 5%, rgb(84, 84, 84) 0%, rgb(49, 49, 49) 30%, rgb(8, 8, 8) 100%);
-  background:-o-radial-gradient(circle at 30% 5%, rgb(84, 84, 84) 0%, rgb(49, 49, 49) 30%, rgb(8, 8, 8) 100%);
-  background:-ms-radial-gradient(circle at 30% 5%, rgb(84, 84, 84) 0%, rgb(49, 49, 49) 30%, rgb(8, 8, 8) 100%);
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar{
+    display: none;
+  }
 }
 
 .container{
