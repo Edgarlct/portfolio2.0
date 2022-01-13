@@ -1,8 +1,8 @@
 <template>
-  <div class="container-presentation">
+  <div class="container-presentation" v-on:mouseenter="startAnimation">
     <div class="container-img">
       <div class="border-outside"></div>
-      <div class="img-presentation">
+      <div id="img-pres" class="img-presentation">
         <img :src="imgPresentation"/>
       </div>
     </div>
@@ -16,6 +16,11 @@
 <script>
 export default {
   name: "Presentation",
+  methods:{
+    startAnimation(){
+      document.getElementById("img-pres").classList.add('translate');
+    }
+  },
   data(){
     return{
       imgPresentation: require('@/assets/presentation.jpg'),
@@ -62,7 +67,8 @@ export default {
     filter: grayscale(100%) contrast(96%) brightness(90%);
     -webkit-filter: grayscale(100%) contrast(96%) brightness(90%);
     -moz-filter: grayscale(100%) contrast(96%) brightness(90%);
-    animation: imgAnimation ease-in 0.5s;
+    transition: transform ease-in 0.5s;
+    transform: translate(5%, 5%);
 
 
     >img{
@@ -70,10 +76,8 @@ export default {
     }
   }
 
-  @keyframes imgAnimation {
-    from{
-      transform: translate(5%, 5%);
-    }
+  .translate{
+    transform: translate(0%, 0%);
   }
 
   .presentation{
