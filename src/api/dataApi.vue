@@ -9,34 +9,43 @@ export default {
           img:require('../assets/spidermanHome.jpg'),
           name: 'Spider-man',
           description: 'Projet réalisé pour la marque Monade, fabricant et distributeur de limonades Bio. Le site a été entièrement designé et développé en étroite collaboration avec le responsable de la marque.',
-          detail:[
+          detail:
             {
               name: 'Spider-man Détail',
-              description: 'Projet réalisé pour la marque Monade, fabricant et distributeur de limonades Bio. Le site a été entièrement designé et développé en étroite collaboration avec le responsable de la marque.'
+              description: 'Projet réalisé pour la marque Monade, fabricant et distributeur de limonades Bio. Le site a été entièrement designé et développé en étroite collaboration avec le responsable de la marque.',
+              img:[
+                require('../assets/spidermanHome.jpg'),
+                require('../assets/monadeHome.jpg')
+              ]
             },
-          ],
         },
         {
           img:require('../assets/monadeHome.jpg'),
           name: 'Monade Bio',
           description: 'Projet réalisé pour valider ma première année. Il s\'agissait de réaliser un site web sur un personnage de fiction, avec une gestion de blog et d’utilisateur.',
-          detail:[
+          detail:
             {
               name: 'Monade Détail',
-              description: 'Projet réalisé pour la marque Monade, fabricant et distributeur de limonades Bio. Le site a été entièrement designé et développé en étroite collaboration avec le responsable de la marque.'
+              description: 'Projet réalisé pour la marque Monade, fabricant et distributeur de limonades Bio. Le site a été entièrement designé et développé en étroite collaboration avec le responsable de la marque.',
+              img:[
+                require('../assets/spidermanHome.jpg'),
+                require('../assets/monadeHome.jpg')
+              ]
             },
-          ],
         },
         {
           img:require('../assets/app.jpg'),
           name: 'Association du pôle LDV',
           description: 'Dans le cadre de ma formation en deuxième année, en groupe nous avons pour objectif de réaliser une application cross-plateforme, pour les associations présentes sur le campus.',
-          detail:[
+          detail:
             {
               name: 'asso Détail',
-              description: 'Projet réalisé pour la marque Monade, fabricant et distributeur de limonades Bio. Le site a été entièrement designé et développé en étroite collaboration avec le responsable de la marque.'
+              description: 'Projet réalisé pour la marque Monade, fabricant et distributeur de limonades Bio. Le site a été entièrement designé et développé en étroite collaboration avec le responsable de la marque.',
+              img:[
+                require('../assets/spidermanHome.jpg'),
+                require('../assets/monadeHome.jpg')
+              ]
             },
-          ],
         }
       ],
 
