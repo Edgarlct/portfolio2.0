@@ -9,7 +9,9 @@
         <p>{{ displayDesc() }}</p>
         <div class="btn-nav">
           <div class="btn-arrow" @click="before()"><i class="fas fa-arrow-left"></i>Précédent</div>
-          <div class="btn-see-plus">Voir le projet</div>
+          <router-link class="btn-see-plus" :to="{ name: 'project-detail', params: { id: currentValue } }">
+            Voir le projet
+          </router-link>
           <div class="btn-arrow" @click="next()">Suivant<i class="fas fa-arrow-right"></i></div>
         </div>
       </div>
@@ -23,8 +25,8 @@ import changeProject from "../use/use-ListProject"
 export default {
   name: "ListProjects",
   setup() {
-    const {displayImg, displayName, displayDesc, next, before} = changeProject();
-    return {displayImg, displayName, displayDesc, next, before}
+    const {currentValue, displayImg, displayName, displayDesc, next, before} = changeProject();
+    return {currentValue, displayImg, displayName, displayDesc, next, before}
   },
   data() {
     return {}
@@ -114,6 +116,8 @@ export default {
     padding: 1rem 1.5rem;
     background-color: $black;
     cursor: pointer;
+    text-decoration: none;
+    color: $white;
   }
 
 }

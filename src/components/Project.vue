@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import ListProjects from "../components/ListProjects";
+import ListProjects from "./ListProjects";
 export default {
   name: "Projet",
   components: {ListProjects}
