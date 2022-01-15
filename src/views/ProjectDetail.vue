@@ -13,19 +13,23 @@
     <div class="text-side">
       <h2>{{ api.name }}</h2>
       <p>{{ api.description }}</p>
+      <p>Technologie utilisées :</p>
+      <div class="skill-use">
+        <Progress class="skill" v-for="(skill) in api.techno" :key="skill.id" :name="skill.name" :progress="100" :url="skill.logo"></Progress>
+      </div>
       <router-link :to="{name: 'Home'}" class="btn-plus">Retour</router-link>
     </div>
   </div>
 </template>
 
 <script>
+import Progress from "../components/Progress";
 import NavMenu from "../components/NavMenu";
 import dataApi from "../api/dataApi";
-// import {ref} from "vue";
 
 export default {
   name: "ProjectDetail",
-  components: {NavMenu},
+  components: {NavMenu, Progress},
   props: ['id'],
   data() {
     return {
@@ -82,6 +86,10 @@ export default {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+
+  .name{
+    background-color: $black;
+  }
 }
 
 .img-side {
@@ -172,5 +180,16 @@ export default {
   width: fit-content;
   margin: 2rem auto 0;
 }
+.skill-use{
+  margin-top: 1rem;
+  display: flex;
+  gap: 2rem;
 
+  >.skill{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
 </style>
