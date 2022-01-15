@@ -4,6 +4,7 @@
     <Header></Header>
     <Presentation></Presentation>
     <Project></Project>
+    <CompetencesList></CompetencesList>
   </div>
 </template>
 
@@ -12,10 +13,12 @@ import NavMenu from "../components/NavMenu";
 import Header from "../components/Header";
 import Presentation from "../components/Presentation";
 import Project from "../components/Project";
+import CompetencesList from "../components/CompetencesList";
 
 export default {
   name: "Home",
   components: {
+    CompetencesList,
     NavMenu,
     Header,
     Presentation,
