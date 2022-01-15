@@ -41,6 +41,7 @@ export default {
 
       a{
         color: currentColor;
+        @include color-hover;
       }
 
       &:first-of-type{

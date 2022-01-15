@@ -68,6 +68,7 @@ export default {
       i{
         color: $gray-600;
         font-size: 1.5rem;
+        @include color-hover;
       }
     }
 
@@ -107,6 +108,8 @@ export default {
         text-decoration: none;
         color: $gray-200;
         cursor: pointer;
+        text-shadow: $black 1px 1px 1px;
+        @include color-hover;
       }
     }
   }

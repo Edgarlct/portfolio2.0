@@ -109,6 +109,7 @@ export default {
       align-items: center;
       gap: .5rem;
       cursor: pointer;
+      @include color-hover;
     }
   }
 
@@ -118,6 +119,8 @@ export default {
     cursor: pointer;
     text-decoration: none;
     color: $white;
+
+    @include color-hover;
   }
 
 }

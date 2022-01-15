@@ -53,7 +53,7 @@ export default {
     height: 100%;
     min-width: 300px;
     max-width: 560px;
-    border: solid 5px white;
+    border: solid 5px $orange;
     transform: translate(5%, 5%);
   }
   .img-presentation{

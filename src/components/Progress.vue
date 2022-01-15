@@ -29,12 +29,12 @@ export default {
         radial: false,
         colors: [
           {
-            color: "#ececec",
+            color: "#F0810AFF",
             offset: "0",
             opacity: "1",
           },
           {
-            color: "#ffffff",
+            color: "#F0810AFF",
             offset: "100",
             opacity: "1",
           },
@@ -54,7 +54,6 @@ export default {
     max-width: 100%;
     padding: 1rem 1.5rem;
     background-color: $gray-800;
-    cursor: pointer;
     text-decoration: none;
     color: $white;
   }

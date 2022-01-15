@@ -9,3 +9,11 @@
   -webkit-filter: grayscale(100%) contrast(96%) brightness(90%);
   -moz-filter: grayscale(100%) contrast(96%) brightness(90%);
 }
+
+@mixin color-hover{
+  transition: color 0.5s;
+
+  &:hover{
+    color: $orange;
+  }
+}
