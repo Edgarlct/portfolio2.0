@@ -183,6 +183,7 @@ export default {
 .skill-use{
   margin-top: 1rem;
   display: flex;
+  justify-content: center;
   gap: 2rem;
 
   >.skill{
