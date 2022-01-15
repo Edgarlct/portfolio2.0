@@ -2,10 +2,10 @@
   <NavMenu></NavMenu>
   <div class="container">
     <Header></Header>
-    <Presentation></Presentation>
-    <Project></Project>
-    <CompetencesList></CompetencesList>
-    <Contact></Contact>
+    <Presentation id="presentation"></Presentation>
+    <Project id="projet"></Project>
+    <CompetencesList id="competence"></CompetencesList>
+    <Contact id="contact"></Contact>
   </div>
 </template>
 
@@ -48,6 +48,7 @@ export default {
   overflow: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  scroll-behavior: smooth;
   &::-webkit-scrollbar{
     display: none;
   }

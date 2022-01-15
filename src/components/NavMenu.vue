@@ -4,10 +4,10 @@
     <p class="logo">ed</p>
     <nav>
       <ul>
-        <li><a href="#">Présentation</a></li>
-        <li><a href="#">Compétence</a></li>
-        <li><a href="#">Projet</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a @click="scrollMeTo('presentation')">Présentation</a></li>
+        <li><a @click="scrollMeTo('projet')">Projet</a></li>
+        <li><a @click="scrollMeTo('competence')">Compétences</a></li>
+        <li><a @click="scrollMeTo('contact')">Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -27,7 +27,14 @@
 
 <script>
 export default {
-  name: "NavMenu"
+  name: "NavMenu",
+  methods: {
+    scrollMeTo(refName) {
+      let element = document.getElementById(refName)
+      let top = element.offsetTop;
+      document.getElementById('app').scrollTo(0, top);
+    }
+  }
 }
 </script>
 
@@ -99,6 +106,7 @@ export default {
       a{
         text-decoration: none;
         color: $gray-200;
+        cursor: pointer;
       }
     }
   }
