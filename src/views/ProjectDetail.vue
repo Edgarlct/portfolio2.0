@@ -17,7 +17,7 @@
       <div class="skill-use">
         <Progress class="skill" v-for="(skill) in api.techno" :key="skill.id" :name="skill.name" :progress="100" :url="skill.logo"></Progress>
       </div>
-      <router-link :to="{name: 'Home'}" class="btn-plus">Retour</router-link>
+      <router-link :to="{name: 'Home'}" class="btn-back">Retour</router-link>
     </div>
   </div>
 </template>
@@ -105,7 +105,7 @@ export default {
     bottom: 50%;
     z-index: 10;
     transform: translate(0, 50%);
-
+    color: $orange;
     &:first-of-type {
       left: 0;
     }
@@ -170,7 +170,7 @@ export default {
   }
 }
 
-.btn-plus {
+.btn-back {
   padding: 1rem 1.5rem;
   background-color: $black;
   cursor: pointer;
@@ -179,6 +179,7 @@ export default {
   display: block;
   width: fit-content;
   margin: 2rem auto 0;
+  @include color-hover;
 }
 .skill-use{
   margin-top: 1rem;
