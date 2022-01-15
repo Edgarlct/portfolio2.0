@@ -5,6 +5,7 @@
     <Presentation></Presentation>
     <Project></Project>
     <CompetencesList></CompetencesList>
+    <Contact></Contact>
   </div>
 </template>
 
@@ -14,10 +15,12 @@ import Header from "../components/Header";
 import Presentation from "../components/Presentation";
 import Project from "../components/Project";
 import CompetencesList from "../components/CompetencesList";
+import Contact from "../components/Contact";
 
 export default {
   name: "Home",
   components: {
+    Contact,
     CompetencesList,
     NavMenu,
     Header,
