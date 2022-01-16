@@ -1,5 +1,5 @@
 <template>
-  <div  class="container-skill" v-on:mouseenter="lunch">
+  <div  class="container-skill">
     <h2>Compétences</h2>
     <div>
       <Progress class="skill" v-for="(skill) in api" :key="skill.id" :name="skill.name" :progress="skill.progress" :url="skill.logo"></Progress>
@@ -40,6 +40,8 @@ export default {
 
     >div{
       display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 3rem;
     }
   }
