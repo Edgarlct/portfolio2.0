@@ -44,7 +44,6 @@ export default {
     @include m{
       flex-direction: column;
       gap: 3rem;
-      height: 100%;
     }
   }
 
