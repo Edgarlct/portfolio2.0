@@ -17,9 +17,9 @@
       <li><a href="#"><i class="fab fa-github"></i></a></li>
       <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
     </ul>
-    <div class="container-scroll">
+    <div class="container-scroll" id="scroll-container">
       <span></span>
-      <div>
+      <div id="scroll-indicator">
         <p>scroll</p>
       </div>
     </div>
@@ -40,7 +40,24 @@ export default {
       let element = document.getElementById(refName)
       let top = element.offsetTop;
       document.getElementById('app').scrollTo(0, top);
+      console.log(document.getElementById('app'))
+      console.log(top)
+    },
+    scrollIndicator(){
+      // console.log(document.getElementById('scroll-container'))
+      let scrollIndicator = document.getElementById('scroll-indicator');
+      const marge = document.getElementById('scroll-container').clientHeight - scrollIndicator.clientHeight
+      console.log(marge)
+      let app = document.getElementById('app');
+      document.getElementById('app').addEventListener('scroll', function (){
+        const progress = app.scrollTop / (app.scrollHeight - app.clientHeight)
+        let postion = Math.round(((marge * progress)))
+        setTimeout(function (){scrollIndicator.style.top = postion + "px"}, 200)
+      })
     }
+  },
+  mounted() {
+    this.scrollIndicator()
   }
 }
 </script>
@@ -154,7 +171,6 @@ export default {
 
     div{
       position: relative;
-      top: 0px;
       background-color: rgb(8, 8, 8);
       z-index: 1;
       height: fit-content;
