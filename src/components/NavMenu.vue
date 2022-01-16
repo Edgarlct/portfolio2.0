@@ -2,7 +2,8 @@
 <div class="bg"></div>
   <div class="sidebar-top">
     <p class="logo">ed</p>
-    <nav>
+    <BurgerMenu class="display-burger"></BurgerMenu>
+    <nav class="display-nav">
       <ul>
         <li><a @click="scrollMeTo('presentation')">Présentation</a></li>
         <li><a @click="scrollMeTo('projet')">Projet</a></li>
@@ -26,11 +27,16 @@
 </template>
 
 <script>
+import BurgerMenu from "./BurgerMenu";
+import router from "../router";
 export default {
   name: "NavMenu",
+  components: {BurgerMenu},
   methods: {
     scrollMeTo(refName) {
-      console.log(this.$router.patch)
+      if (this.$router.currentRoute.value.fullPath !== "/"){
+        router.back();
+      }
       let element = document.getElementById(refName)
       let top = element.offsetTop;
       document.getElementById('app').scrollTo(0, top);
@@ -52,6 +58,17 @@ export default {
     background:-o-radial-gradient(circle at 30% 5%, rgb(84, 84, 84) 0%, rgb(49, 49, 49) 30%, rgb(8, 8, 8) 100%);
     background:-ms-radial-gradient(circle at 30% 5%, rgb(84, 84, 84) 0%, rgb(49, 49, 49) 30%, rgb(8, 8, 8) 100%);
     z-index: -1;
+  }
+  .display-nav{
+    @include xs{
+      display: none;
+    }
+  }
+  .display-burger{
+    display: none;
+    @include xs{
+      display: block;
+    }
   }
     .sidebar-top, .sidebar-bottom{
       position: fixed;
