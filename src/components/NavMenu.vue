@@ -1,7 +1,7 @@
 <template>
 <div class="bg"></div>
   <div class="sidebar-top">
-    <p class="logo">ed</p>
+    <router-link :to="{name: Home}" class="logo">ed</router-link>
     <BurgerMenu class="display-burger"></BurgerMenu>
     <nav class="display-nav">
       <ul>
@@ -135,6 +135,8 @@ export default {
     font-size: 2rem;
     font-weight: 900;
     color: $gray-200;
+    text-decoration: none;
+    @include color-hover;
   }
 
   nav{
