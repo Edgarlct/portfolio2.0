@@ -13,7 +13,7 @@
     <div class="text-side">
       <h2>{{ api.name }}</h2>
       <p>{{ api.description }}</p>
-      <p>Technologie utilisées :</p>
+      <h3>Technologie utilisées :</h3>
       <div class="skill-use">
         <Progress class="skill" v-for="(skill) in api.techno" :key="skill.id" :name="skill.name" :progress="100" :url="skill.logo"></Progress>
       </div>
@@ -41,23 +41,19 @@ export default {
 
     next(){
       if (this.currentValue == this.api.img.length-1){
-        console.log("current " + this.currentValue)
         this.currentValue = 0
       }
       else {
         console.log("current " + this.currentValue)
-        // console.log("len " + this.api.img.length)
         this.currentValue++;
       }
       return this.currentValue;
     },
     before(){
       if (this.currentValue == 0){
-        console.log("current " + this.currentValue)
         this.currentValue = this.api.img.length-1;
       }
       else {
-        console.log("current " + this.currentValue)
         this.currentValue--;
       }
       return this.currentValue;
@@ -182,8 +178,13 @@ export default {
     font-size: 2rem;
     margin-bottom: 1rem;
   }
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
   p{
     line-height: 1.5rem;
+    margin-bottom: 1rem;
   }
 }
 
