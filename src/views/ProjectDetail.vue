@@ -203,6 +203,7 @@ export default {
   margin-top: 1rem;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 2rem;
 
   >.skill{
