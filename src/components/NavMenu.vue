@@ -30,6 +30,7 @@ export default {
   name: "NavMenu",
   methods: {
     scrollMeTo(refName) {
+      console.log(this.$router.patch)
       let element = document.getElementById(refName)
       let top = element.offsetTop;
       document.getElementById('app').scrollTo(0, top);

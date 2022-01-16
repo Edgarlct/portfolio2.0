@@ -104,6 +104,9 @@ export default {
   @include l{
     width: 80%;
   }
+  @include xs{
+    width: 90%;
+  }
 
   > i {
     font-size: 1.5rem;
@@ -169,6 +172,11 @@ export default {
   @include l{
     width: 70%;
     margin-bottom: 4rem;
+  }
+
+  @include xs{
+    padding: 1rem;
+    width: 80%;
   }
   h2 {
     font-size: 2rem;
