@@ -14,6 +14,9 @@
           </router-link>
           <div class="btn-arrow" @click="next()">Suivant<i class="fas fa-arrow-right"></i></div>
         </div>
+        <router-link class="btn-see-plus mobile" :to="{ name: 'project-detail', params: { id: currentValue } }">
+          Voir le projet
+        </router-link>
       </div>
     </div>
   </div>
@@ -50,6 +53,10 @@ export default {
     justify-content: center;
     transform: translate(0%, -10%);
 
+    @include xs{
+      height: 40%;
+    }
+
     > div {
       @include flex-center;
     }
@@ -59,6 +66,14 @@ export default {
       width: 40%;
       overflow: hidden;
       margin: 0 1rem;
+
+      @include m{
+        width: 60%;
+      }
+      @include s{
+        margin: 0;
+        width: 70%;
+      }
     }
 
     .image-project {
@@ -66,6 +81,12 @@ export default {
       width: 30%;
       overflow: hidden;
       filter: blur(5px);
+      @include m{
+        width: 20%;
+      }
+      @include s{
+        width: 7%;
+      }
     }
 
     img {
@@ -86,6 +107,14 @@ export default {
 
   background-color: $gray-800;
   padding: 1rem 1.5rem;
+
+  @include l{
+    width: 75%;
+  }
+
+  @include s{
+    width: 85%;
+  }
 
   h2 {
     font-size: 2rem;
@@ -110,6 +139,7 @@ export default {
       gap: .5rem;
       cursor: pointer;
       @include color-hover;
+
     }
   }
 
@@ -121,6 +151,18 @@ export default {
     color: $white;
 
     @include color-hover;
+
+    @include s{
+      display: none;
+    }
+  }
+
+  .mobile{
+    display: none;
+    @include s{
+      margin-top: 1.5rem;
+      display: block;
+    }
   }
 
 }

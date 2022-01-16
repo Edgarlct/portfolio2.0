@@ -86,7 +86,9 @@ export default {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-
+  @include l{
+    flex-direction: column;
+  }
   .name{
     background-color: $black;
   }
@@ -98,6 +100,10 @@ export default {
   position: relative;
   display: flex;
   justify-content: center;
+
+  @include l{
+    width: 80%;
+  }
 
   > i {
     font-size: 1.5rem;
@@ -160,7 +166,10 @@ export default {
 
   padding: 2rem;
   background-color: $gray-800;
-
+  @include l{
+    width: 70%;
+    margin-bottom: 4rem;
+  }
   h2 {
     font-size: 2rem;
     margin-bottom: 1rem;

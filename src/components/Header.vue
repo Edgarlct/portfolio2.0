@@ -39,6 +39,10 @@ export default {
     animation: typing 1s steps(5), blink .5s 2 alternate;
     white-space: nowrap;
     overflow: hidden;
+
+    @include xs{
+      font-size: 6rem;
+    }
   }
 
   @keyframes typing {
@@ -65,6 +69,7 @@ export default {
     >p{
       text-align: left;
       color: $gray-400;
+      width: fit-content;
     }
   }
 
@@ -82,6 +87,7 @@ export default {
     opacity: 0;
     animation: ease-in 1s opacity forwards;
     animation-delay: 1s;
+    width: fit-content;
   }
 
   @keyframes opacity {

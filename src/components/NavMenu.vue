@@ -59,6 +59,9 @@ export default {
       flex-direction: row;
       justify-content: space-between;
       padding: 0 2rem;
+      @include xs{
+        padding: 0 1rem;
+      }
     }
 
     .sidebar-bottom{

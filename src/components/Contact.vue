@@ -28,6 +28,10 @@ export default {
     background-color: $gray-800;
     margin: 0 auto 5rem;
 
+    @include m{
+      max-width: 80%;
+    }
+
     h2{
       font-size: 2rem;
       margin-bottom: 2rem;

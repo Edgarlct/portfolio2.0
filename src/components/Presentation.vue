@@ -40,12 +40,23 @@ export default {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+
+    @include m{
+      flex-direction: column;
+      gap: 3rem;
+      height: 100%;
+    }
   }
 
   .container-img{
     width: 45%;
     height: 80%;
     position: relative;
+
+    @include m {
+      height: 200px;
+      width: unset;
+    }
   }
   .border-outside{
     position: absolute;
@@ -68,6 +79,9 @@ export default {
     transition: transform ease-in 0.5s;
     transform: translate(5%, 5%);
 
+    @include m{
+      transform: translate(0%, 0%);
+    }
 
     >img{
       height: 100%;
@@ -82,7 +96,12 @@ export default {
     width: 45%;
     text-align: left;
     max-width: 580px;
-
+    @include l{
+      width: 35%;
+    }
+    @include m{
+      width: 80%;
+    }
     h2{
       font-size: 1.75rem;
       line-height: 1.2em;
