@@ -33,7 +33,11 @@ export default {
     justify-content: center;
     align-items: center;
     gap: 3rem;
-
+    @include s(){
+      height: 100%;
+      margin-top: 5rem;
+      margin-bottom: 5rem;
+    }
     h2{
       font-size: 2rem;
     }
