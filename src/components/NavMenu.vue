@@ -14,8 +14,8 @@
   </div>
   <div class="sidebar-bottom">
     <ul class="container-reseaux">
-      <li><a href="#"><i class="fab fa-github"></i></a></li>
-      <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+      <li><a href="https://github.com/Edgarlct" target="_blank"><i class="fab fa-github"></i></a></li>
+      <li><a href="https://www.linkedin.com/in/edgar-lecomte-347433125/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
     </ul>
     <div class="container-scroll" id="scroll-container">
       <span></span>
