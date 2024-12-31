@@ -2,9 +2,9 @@
   <NavMenu></NavMenu>
   <div class="container">
     <Header></Header>
-    <Presentation id="presentation"></Presentation>
-    <Project id="projet"></Project>
-    <CompetencesList id="competence"></CompetencesList>
+<!--    <Presentation id="presentation"></Presentation>-->
+<!--    <Project id="projet"></Project>-->
+<!--    <CompetencesList id="competence"></CompetencesList>-->
     <Contact id="contact"></Contact>
   </div>
 </template>
